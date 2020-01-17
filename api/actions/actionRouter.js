@@ -5,20 +5,19 @@ const midWare = require('./actionMiddleware');
 
 const router = express.Router();
 
-// POST PROJECT ACTIONS
-router.post('/:id/actions', midWare.validateAction, (req, res) => {
+// POST
+router.post('/project/:id', midWare.validateAction, (req, res) => {
     let action = req.body
     action = {...action, project_id: req.params.id}
-
-    Action.insert(req.body)
+    Action.insert(action)
     .then(act => {
         res.status(201).json(act)
     })
     .catch(err => {
         console.log(err);
         res.status(500).json({ message: "Could not add action."})
-    })
-})
+    });
+});
 
 // GET
 router.get('/', (req, res) => {

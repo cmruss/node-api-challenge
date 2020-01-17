@@ -40,13 +40,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+Express is a framework for Node.js, it handles ports, routing, and middleware
+
 - [ ] Describe Middleware?
+
+Middleware is anything between the server and the router that can be used to execute some task upon a request
 
 - [ ] Describe a Resource?
 
+A resource is the data stored on the server that is being supplied to the API.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+A response status & a JSON message containing the pertinent information. 
+
 - [ ] How can we partition our application into sub-applications?
+
+Separate filesystems for the server, routers, & middleware.
 
 ## Minimum Viable Product
 
